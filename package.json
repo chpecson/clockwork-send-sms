@@ -1,0 +1,17 @@
+{
+  "name": "clockwork-send-sms",
+  "version": "1.0.0",
+  "description": "A microservice for sending sms in philippines with clockwork",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Christian Pecson <chpecson@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "clockwork": "^0.1.4",
+    "express": "^4.16.2"
+  }
+}
