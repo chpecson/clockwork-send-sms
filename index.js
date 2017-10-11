@@ -17,17 +17,10 @@ app.post('/send', function(req, mainRes) {
 		}, function(err, res) {
 			if (err) {
 				console.log(`Oops! ${err}`);
-				mainRes.json({
-					status: -1,
-					message: `Oops! ${err}`
-				});
+				mainRes.send(`Oops! ${err}`);
 			} else {
-				console.log('Sent successfully', res.responses[0]);
-				mainRes.json({
-					status: 1,
-					id: res.responses[0],
-					message: `The message was successfully sent to ${receiver} with the message of ${message}`
-				});
+				console.log('Sent successfully \n', res.responses[0]);
+				mainRes.send(`The message was successfully sent to ${receiver} \n with the message of ${message}`);
 			}
 		}
 	);
