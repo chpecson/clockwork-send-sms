@@ -7,6 +7,10 @@ var clockwork = require('clockwork'),
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', function(req, res) {
+	res.send('Whoo! This is it in dbms2final!');
+})
+
 app.post('/send', function(req, mainRes) {
 	var receiver = req.body.number;
 	var message = req.body.message;
