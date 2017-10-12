@@ -5,7 +5,9 @@ var clockwork = require('clockwork'),
 	app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ 
+	extended: true 
+}));
 
 app.get('/', function(req, res) {
 	res.send('Whoo! This is it in dbms2final!');
