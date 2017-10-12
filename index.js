@@ -1,9 +1,11 @@
+const PORT = process.env.PORT || 8080,
+	CLOCKWORK_SMS_KEY = '08a14c0a82174c63451b296ade317da3764014fe';
+	
 var clockwork = require('clockwork'),
-	sms = clockwork({key: '99a44fac5d40c67baadc979e36e6aafafc11b2cc'}),
+	sms = clockwork({key: CLOCKWORK_SMS_KEY}),
 	express = require('express'),
 	bodyParser = require('body-parser'),
-	app = express(),
-	PORT = process.env.PORT || 8080;
+	app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
