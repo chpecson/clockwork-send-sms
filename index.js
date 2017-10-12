@@ -2,12 +2,11 @@ var clockwork = require('clockwork'),
 	sms = clockwork({key: '99a44fac5d40c67baadc979e36e6aafafc11b2cc'}),
 	express = require('express'),
 	bodyParser = require('body-parser'),
-	app = express();
+	app = express(),
+	PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ 
-	extended: true 
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
 	res.send('Whoo! This is it in dbms2final!');
@@ -32,6 +31,6 @@ app.post('/send', function(req, mainRes) {
 	);
 });
 
-app.listen(3000, function() {
-	console.log('Listening on port 3000');
+app.listen(PORT, function() {
+	console.log(`Listening on ${PORT}`);
 });
